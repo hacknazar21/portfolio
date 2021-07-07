@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap');
+
+a{
+	text-decoration: none;
+	color: #fff;
+}
+body {
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+h1, h2, h3{
+	padding: 0;
+	margin: 0;
+}
+h1{
+	font-weight: bold;
+	font-size: 40px;
+	line-height: 54px;
+	letter-spacing: 0.055em;
+	text-transform: uppercase;
+}
+.header {
+	display: flex;
+	justify-content: center;
+	position: fixed;
+	top: 0;
+	z-index: 2;
+	width: 100vw;
+	&__container{
+		margin-top: 38px;
+		margin-bottom: 38px;
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+	}
+	&__logo{
+
+	}
+	&__logo:hover {
+		cursor: pointer;
+		.logo__text{
+			transform: translateX(20px);
+		}
+	}
+	&__nav {
+
+	}
+}
+._bgnd{
+	background-color: #13181E;
+}
+.container {
+	max-width: 1170px;
+	padding: 0 10px;
+}
+.logo {
+	display: flex;
+	width: 106px;
+	position: relative;
+	&__moon {
+		width: 41px;
+		height: 41px;
+		border-radius:50%;
+		background: linear-gradient(108.24deg, #FFFFFF 8.46%, #13181F 97.95%);
+	}
+
+	&__text {
+		transition: transform 0.5s ease;
+		width: 100%;
+		bottom: 0;
+		right: -25px;
+		font-size: 15px;
+		line-height: 20px;
+		letter-spacing: 0.05em;
+		position: absolute;
+	}
+}
+.nav {
+	display: flex;
+	align-self: center;
+	&__link {
+		font-size: 15px;
+		line-height: 20px;
+		letter-spacing: 5%;
+		margin-right: 39px;
+	}
+	&__link:last-child {
+		margin: 0;
+	}
+	&__link a{
+		transition: color 0.2s ease;
+	}
+	&__link a:hover{
+		color: #ff2;
+	}
+}
+
+.first-screen {
+	display: flex;
+	justify-content: center;
+	&__container {
+		display: flex;
+		width: 100%;
+		margin-top: 117px;
+		justify-content: space-between;
+	}
+	&__offer {
+		max-width: 524px;
+		margin-top: 132px;
+	}
+	&__offer div:not(:last-child){
+		margin-bottom: 33px;
+	}
+	&__image {
+		margin-bottom: 77px;
+	}
+	&__image img {
+		max-width: 100%;
+		object-fit: cover;
+	}
+}
+.offer {
+	&__title {}
+	&__text{
+		font-weight: 300;
+		font-size: 20px;
+		line-height: 164%;
+		/* or 33px */
+		letter-spacing: 3.5%;
+	}
+
+	&__btn{
+		background: #292FB4;
+		box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.44);
+		border-radius: 50px;
+		max-width: 227px;
+		transition:box-shadow  0.2s linear, background 0.2s linear; 
+	}
+	&__btn:hover{
+		box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.44);
+		background: #232896;
+	}
+	&__btn a{
+		text-align: center;
+		padding: 16px 55px;
+		font-size: 17px;
+		line-height: 23px;
+		letter-spacing: 5%;
+		text-transform: uppercase;
+		display: block;
+	}
+}
+.image {
+	position: relative;
+	&__bgrn {}
+	&__person {
+		position: absolute;
+		top: 0;
+		right: 40px;
+	}
+}
