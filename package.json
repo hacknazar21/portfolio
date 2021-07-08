@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hacknazar21/portfolio.git"
+    "url": "git+https://github.com/hacknazar21/portfolio.github.io.git"
   },
   "author": "Nazar Kultayev",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/hacknazar21/portfolio/issues"
+    "url": "https://github.com/hacknazar21/portfolio.github.io/issues"
   },
-  "homepage": "https://github.com/hacknazar21/portfolio#readme",
+  "homepage": "https://github.com/hacknazar21/portfolio.github.io#readme",
   "devDependencies": {
     "browser-sync": "^2.27.4",
     "del": "^6.0.0",
