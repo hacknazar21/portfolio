@@ -790,7 +790,24 @@ animate({
 			Element.prototype.msMatchesSelector;
 	}
 })();
+window.onload = function () {
+    // Header
+    const headerEl = document.querySelector('.header');
+    const callback = function (entries, observer) {
+        if (entries[0].isIntersecting) {
+            headerElement.classList.remove('_scroll');
+        }
+        else {
+            headerElement.classList.add('_scroll');
 
+        }
+    }
+
+    const headerObserver = new IntersectionObserver(callback);
+    headerObserver.observe(headerElement);
+
+
+}
 //let btn = document.querySelectorAll('button[type="submit"],input[type="submit"]');
 let forms = document.querySelectorAll('form');
 if (forms.length > 0) {

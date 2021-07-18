@@ -888,6 +888,18 @@ body.ie ._ibg img {
   background: url("../img/icons/close.svg") 0 0 no-repeat;
 }
 
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.header._scroll .header__content {
+  background-color: rgba(19, 24, 30, 0.5);
+  padding: 20px 0 !important;
+}
+
 .header__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -899,6 +911,9 @@ body.ie ._ibg img {
       -ms-flex-align: center;
           align-items: center;
   padding: 37px 0;
+  -webkit-transition: background-color 0.3s ease 0s, padding 0.3s ease 0s;
+  -o-transition: background-color 0.3s ease 0s, padding 0.3s ease 0s;
+  transition: background-color 0.3s ease 0s, padding 0.3s ease 0s;
 }
 
 .header__logo {
@@ -987,7 +1002,7 @@ body.ie ._ibg img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 80px;
+  margin: 120px auto;
 }
 
 .first-screen__offer {
@@ -1392,6 +1407,10 @@ body.ie ._ibg img {
 }
 
 @media (any-hover: hover) {
+  .header._scroll .header__content:hover {
+    background-color: rgba(19, 24, 30, 0.9);
+  }
+
   .header__logo:hover .logo-header__name {
     color: #66f095;
     left: 35px;
