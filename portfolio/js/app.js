@@ -814,17 +814,22 @@ window.onload = function () {
 
         if (targetElement.classList.contains('_scrollTo')) {
             e.preventDefault();
+            if (document.querySelector('.menu__icon').classList.contains('_active')) {
+                document.querySelector('.menu__icon').classList.remove('_active');
+                document.querySelector('.menu__body').classList.remove('_active');
+                document.querySelector('._lock').classList.remove('_lock');
+            }
             footerSocial.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
             });
-
+            if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
+                footerSocial.classList.add('_active');
+                setTimeout(() => { footerSocial.classList.remove('_active'); }, 2000);
+            }
         }
 
-        if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
-            footerSocial.classList.add('_active');
-            setTimeout(() => { footerSocial.classList.remove('_active'); }, 2000);
-        }
+
     }
 
 }

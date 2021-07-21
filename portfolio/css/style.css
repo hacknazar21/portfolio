@@ -1437,6 +1437,10 @@ body.ie ._ibg img {
     padding: 0 10px;
   }
 
+  .header._scroll .header__content {
+    background-color: rgba(19, 24, 30, 0.9);
+  }
+
   .header__content {
     padding-top: 37px;
     padding-bottom: 37px;
