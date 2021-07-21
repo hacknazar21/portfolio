@@ -805,7 +805,27 @@ window.onload = function () {
 
     const headerObserver = new IntersectionObserver(callback);
     headerObserver.observe(headerEl);
+    document.addEventListener("click", documentActions);
 
+    function documentActions(e) {
+        const targetElement = e.target;
+        const footerSocial = document.querySelector('.footer__social');
+
+
+        if (targetElement.classList.contains('_scrollTo')) {
+            e.preventDefault();
+            footerSocial.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+
+        }
+
+        if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
+            footerSocial.classList.add('_active');
+            setTimeout(() => { footerSocial.classList.remove('_active'); }, 2000);
+        }
+    }
 
 }
 //let btn = document.querySelectorAll('button[type="submit"],input[type="submit"]');
