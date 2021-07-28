@@ -140,7 +140,7 @@ h6 {
 }
 
 body {
-  background-color: #13181e;
+  background-color: #020203;
   color: #ffffff;
 }
 
@@ -948,7 +948,7 @@ body.ie ._ibg img {
 }
 
 .header._scroll .header__content {
-  background-color: rgba(19, 24, 30, 0.5);
+  background-color: rgba(2, 2, 3, 0.5);
   padding: 20px 0 !important;
 }
 
@@ -1205,14 +1205,12 @@ body.ie ._ibg img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 304px;
           flex: 0 0 304px;
-  width: 68.4615384615%;
+  width: 100%;
   color: #21243d;
+  padding: 20px;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -1224,14 +1222,20 @@ body.ie ._ibg img {
 }
 
 .item-works__image {
-  padding: 16px;
-  padding-left: 55px;
+  position: relative;
+  min-width: 30%;
+  padding: 0px 0px 180px 0px;
 }
 
 .item-works__image img {
-  width: 236px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
   border-radius: 6px;
-  height: 180px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  top: 0;
+  left: 0;
 }
 
 .item-works__content {
@@ -1345,6 +1349,15 @@ body.ie ._ibg img {
   }
 }
 
+@media (min-width: 767.98px) {
+  .items-works__item {
+    width: 68.4615384615%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 @media (min-width: 991.98px) {
   .quantity__button:hover::before,
   .quantity__button:hover::after {
@@ -1419,15 +1432,10 @@ body.ie ._ibg img {
   }
 
   .item-works__image {
-    padding: 16px 5px;
+    min-width: 100%;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
-  }
-
-  .item-works__image img {
-    width: 118px;
-    height: 90px;
   }
 }
 
@@ -1438,7 +1446,7 @@ body.ie ._ibg img {
   }
 
   .header._scroll .header__content {
-    background-color: rgba(19, 24, 30, 0.9);
+    background-color: rgba(2, 2, 3, 0.9);
   }
 
   .header__content {
@@ -1526,7 +1534,7 @@ body.ie ._ibg img {
 
 @media (any-hover: hover) {
   .header._scroll .header__content:hover {
-    background-color: rgba(19, 24, 30, 0.9);
+    background-color: rgba(2, 2, 3, 0.9);
   }
 
   .header__logo:hover .logo-header__name {
