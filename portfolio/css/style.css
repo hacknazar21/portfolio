@@ -140,7 +140,7 @@ h6 {
 }
 
 body {
-  background-color: #020203;
+  background-color: #191f26;
   color: #ffffff;
 }
 
@@ -948,7 +948,7 @@ body.ie ._ibg img {
 }
 
 .header._scroll .header__content {
-  background-color: rgba(2, 2, 3, 0.5);
+  background-color: rgba(25, 31, 38, 0.5);
   padding: 20px 0 !important;
 }
 
@@ -1285,6 +1285,39 @@ body.ie ._ibg img {
   content: ",";
 }
 
+.loading__popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #191f26;
+  z-index: 1000;
+  -webkit-transition: opacity 0.5s ease 0s, visibility 0.5s ease 0s;
+  -o-transition: opacity 0.5s ease 0s, visibility 0.5s ease 0s;
+  transition: opacity 0.5s ease 0s, visibility 0.5s ease 0s;
+}
+
+.loading__popup::after {
+  content: "";
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  -webkit-transform: translate(-400px, -300px);
+      -ms-transform: translate(-400px, -300px);
+          transform: translate(-400px, -300px);
+  width: 800px;
+  height: 600px;
+  background-image: url(../img/icons/loading.gif);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.wrapper._loaded .loading__popup {
+  opacity: 0;
+  visibility: hidden;
+}
+
 @-webkit-keyframes first-screen__animation {
   0% {
     -webkit-transform: translate(100px, 0);
@@ -1446,7 +1479,7 @@ body.ie ._ibg img {
   }
 
   .header._scroll .header__content {
-    background-color: rgba(2, 2, 3, 0.9);
+    background-color: rgba(25, 31, 38, 0.9);
   }
 
   .header__content {
@@ -1534,7 +1567,7 @@ body.ie ._ibg img {
 
 @media (any-hover: hover) {
   .header._scroll .header__content:hover {
-    background-color: rgba(2, 2, 3, 0.9);
+    background-color: rgba(25, 31, 38, 0.9);
   }
 
   .header__logo:hover .logo-header__name {
